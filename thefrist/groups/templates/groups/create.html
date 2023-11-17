@@ -1,0 +1,11 @@
+{% extends 'components/main.html' %}
+
+{% block content %}
+    <h1>Create a Group</h1>
+    <form method="POST" action="{% url 'groups:create' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Create Group</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'components/main.html' %}
+
+{% block content %}
+    <h1>Delete a Group</h1>
+    <form method="POST" action="{% url 'groups:delete' group.id %}">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ group.id }}">
+        <p>Are you sure you want to delete {{ group.name }}?</p>
+        <a href="/groups" class="btn btn-primary">Cancel</a>
+        <button type="submit" class="btn btn-danger">Delete Group</button>
+    </form>
+
+{% endblock %}

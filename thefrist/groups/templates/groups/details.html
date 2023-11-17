@@ -1,0 +1,20 @@
+{% extends 'components/main.html' %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Hello Groups</h1>
+        <a href="{% url 'groups:update' group.id %}" class="btn btn-primary mb-2">Update Group</a>
+        <a href="{% url 'groups:delete' group.id %}" class="btn btn-danger mb-2">Delete Group</a>        
+
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">Id: {{group.id}}</p>
+                <p class="card-text">Owner: {{group.owner}}</p>
+                <p class="card-text">Name: {{group.name}}</p>
+                <p class="card-text">Description: {{group.description}}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
