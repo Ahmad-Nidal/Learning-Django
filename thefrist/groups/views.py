@@ -7,10 +7,10 @@ def groups(request):
     context = {'groups_list': groups_list}
     return render(request, 'groups/index.html', context)
 
-def details(request, id):
+def detail(request, id):
     group = Group.objects.get(id=id)    
     context = {'group': group, 'id': group.id}
-    return render(request, 'groups/details.html', context)
+    return render(request, 'groups/detail.html', context)
 
 
 def create(request):

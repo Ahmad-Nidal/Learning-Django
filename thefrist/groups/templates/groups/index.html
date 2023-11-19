@@ -13,7 +13,7 @@
                 <ul class="list-group list-group-flush">
                     {% for group in groups_list %}
                         <li class="list-group-item">
-                            <a href="{% url 'groups:details' group.id %}" class="text-dark">{{ group.name }}</a>
+                            <a href="{% url 'groups:detail' group.id %}" class="text-dark">{{ group.name }}</a>
                         </li>
                     {% endfor %}
                 </ul>
